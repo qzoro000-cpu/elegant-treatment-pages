@@ -25,7 +25,7 @@ export function AdvantagesSection({ advantages }: Props) {
             key={a.index}
             className="glass-white group relative overflow-hidden rounded-3xl p-8 text-center transition-all hover:-translate-y-1 sm:p-10"
           >
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-10 bg-gradient-to-b from-white/60 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-10 bg-gradient-to-b from-neutral-200/50 to-transparent" />
             <span className="text-2xl font-light tabular-nums text-muted-foreground">
               {a.index}
             </span>

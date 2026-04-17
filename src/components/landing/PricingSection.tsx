@@ -33,7 +33,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
             )}
           >
             {/* Top shine gradient */}
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-10 bg-gradient-to-b from-white/30 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-10 bg-gradient-to-b from-neutral-200/40 to-transparent" />
             {p.tag && (
               <span
                 className={cn(

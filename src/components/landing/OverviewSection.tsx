@@ -28,7 +28,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
                   key={i}
                   className="glass-white relative overflow-hidden rounded-2xl p-6 text-center"
                 >
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-8 bg-gradient-to-b from-white/60 to-transparent" />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-8 bg-gradient-to-b from-neutral-200/50 to-transparent" />
                   <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </div>
