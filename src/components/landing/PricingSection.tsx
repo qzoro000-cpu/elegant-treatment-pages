@@ -29,9 +29,11 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
               "relative flex flex-col overflow-hidden rounded-3xl p-8 sm:p-10 transition-all",
               p.highlight
                 ? "glass-ink text-white shadow-[var(--shadow-float)] lg:scale-[1.03]"
-                : "bg-surface text-card-foreground shadow-[0_2px_20px_rgba(0,0,0,0.07)]",
+                : "glass-white text-card-foreground",
             )}
           >
+            {/* Top shine gradient */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[10%] min-h-6 bg-gradient-to-b from-white/30 to-transparent" />
             {p.tag && (
               <span
                 className={cn(
