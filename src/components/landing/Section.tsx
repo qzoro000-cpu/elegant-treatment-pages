@@ -53,7 +53,7 @@ export function Section({
             {eyebrow && (
               <div
                 className={cn(
-                  "mb-5 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em]",
+                  "mb-10 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em]",
                   tone === "dark" ? "text-background/60" : "text-muted-foreground",
                   align === "center" && "justify-center",
                 )}

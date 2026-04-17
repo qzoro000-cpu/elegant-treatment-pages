@@ -96,7 +96,7 @@ export function HeroSection({
           {/* Text */}
           <div className="lg:col-span-5 lg:order-1 lg:pb-16 text-center">
             {category && (
-              <div className="mb-8 flex items-center justify-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
+              <div className="mb-10 flex items-center justify-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-muted-foreground">
                 <span className="h-px w-10 bg-foreground/30" />
                 {category}
               </div>
