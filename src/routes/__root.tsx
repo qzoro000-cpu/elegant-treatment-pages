@@ -40,6 +40,16 @@ export const Route = createRootRoute({
     ],
     links: [
       {
+        rel: "preconnect",
+        href: "https://o6cdhdutve.execute-api.ap-northeast-2.amazonaws.com",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://o6cdhdutve.execute-api.ap-northeast-2.amazonaws.com/v1/api/css/drop_fontstream_css/?sid=gAAAAABp34rUSf_DW-bOsbbyudIswhf0pMIf-cFaW8SIJzeKEQ1r1CRw0uMKkq3-EvAsf5nmj0sJVtuW3IRpLV6VMfrsBg3lR_lf5anamYrL2kCVpAhgGsQavSb6gWKjDnYi6f5k9ek3azyTedq11YV4p4TeAWHWIWVsssl9ZvR2wfQ-8_s73u5SrqkbtxZxXYqdKNhIPFvit6u9UZVIm8M5PPSs93GpZPyGCAHfyTEPKEDtLc3miZKBPaJOErxAjxDJXj7u9rpd",
+        charSet: "utf-8",
+        referrerPolicy: "origin",
+      },
+      {
         rel: "stylesheet",
         href: appCss,
       },
@@ -52,9 +62,16 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head suppressHydrationWarning>
         <HeadContent />
+        <link rel="preconnect" href="https://o6cdhdutve.execute-api.ap-northeast-2.amazonaws.com" />
+        <link
+          rel="stylesheet"
+          href="https://o6cdhdutve.execute-api.ap-northeast-2.amazonaws.com/v1/api/css/drop_fontstream_css/?sid=gAAAAABp34rUSf_DW-bOsbbyudIswhf0pMIf-cFaW8SIJzeKEQ1r1CRw0uMKkq3-EvAsf5nmj0sJVtuW3IRpLV6VMfrsBg3lR_lf5anamYrL2kCVpAhgGsQavSb6gWKjDnYi6f5k9ek3azyTedq11YV4p4TeAWHWIWVsssl9ZvR2wfQ-8_s73u5SrqkbtxZxXYqdKNhIPFvit6u9UZVIm8M5PPSs93GpZPyGCAHfyTEPKEDtLc3miZKBPaJOErxAjxDJXj7u9rpd"
+          charSet="utf-8"
+          referrerPolicy="origin"
+        />
       </head>
       <body>
         {children}
