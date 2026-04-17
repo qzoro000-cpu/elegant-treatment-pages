@@ -54,12 +54,12 @@ export function EffectsSection({ effects, progressInfo }: Props) {
               {progressInfo.map((info, i) => (
                 <div
                   key={i}
-                  className="flex flex-col justify-between bg-card p-6 sm:p-8 min-h-[140px]"
+                  className="flex flex-col justify-between bg-card p-6 sm:p-8 min-h-[140px] text-card-foreground"
                 >
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-card-foreground/50">
                     {info.label}
                   </p>
-                  <p className="mt-6 font-display text-2xl font-light leading-tight">
+                  <p className="mt-6 font-display text-2xl font-light leading-tight text-card-foreground">
                     {info.value}
                   </p>
                 </div>
