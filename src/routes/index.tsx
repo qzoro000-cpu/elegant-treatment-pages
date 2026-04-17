@@ -1,26 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TreatmentLanding } from "@/components/landing/TreatmentLanding";
+import { sampleTreatment } from "@/data/treatment";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: `${sampleTreatment.treatmentName} · TATOA Clinic` },
+      {
+        name: "description",
+        content:
+          sampleTreatment.summary ??
+          "TATOA의 시그니처 트리트먼트. 정제된 기술과 단정한 회복 곡선.",
+      },
+      { property: "og:title", content: `${sampleTreatment.treatmentName} · TATOA Clinic` },
+      {
+        property: "og:description",
+        content: sampleTreatment.summary ?? "TATOA의 시그니처 트리트먼트.",
+      },
+      { property: "og:type", content: "website" },
+      ...(sampleTreatment.heroImage
+        ? [
+            { property: "og:image", content: sampleTreatment.heroImage },
+            { name: "twitter:image", content: sampleTreatment.heroImage },
+          ]
+        : []),
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return <TreatmentLanding data={sampleTreatment} />;
 }
