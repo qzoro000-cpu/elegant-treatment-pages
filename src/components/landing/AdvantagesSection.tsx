@@ -13,7 +13,7 @@ export function AdvantagesSection({ advantages }: Props) {
       title={
         <>
           섬세함이 만드는<br />
-          <em className="font-display italic font-light">차이</em>
+          차이
         </>
       }
     >
