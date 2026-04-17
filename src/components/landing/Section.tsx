@@ -42,22 +42,24 @@ export function Section({
             : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
         }}
       />
-      {/* Ambient gold glow — dark sections only, atmospheric candlelight feel */}
-      {tone === "dark" && (
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: [
-              /* primary warm glow — top-right */
-              "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.22) 0%, transparent 65%)",
-              /* secondary accent — bottom-left */
-              "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.14) 0%, transparent 60%)",
-              /* faint center shimmer */
-              "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.06) 0%, transparent 55%)",
-            ].join(", "),
-          }}
-        />
-      )}
+      {/* Ambient gold glow — dark sections: warm candlelight / light sections: ivory-gold whisper */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: tone === "dark"
+            ? [
+                "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.22) 0%, transparent 65%)",
+                "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.14) 0%, transparent 60%)",
+                "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.06) 0%, transparent 55%)",
+              ].join(", ")
+            : [
+                /* mirrored: primary glow — top-left */
+                "radial-gradient(ellipse 65% 50% at 15% 8%, rgba(201,168,92,0.09) 0%, transparent 60%)",
+                /* secondary — bottom-right */
+                "radial-gradient(ellipse 50% 40% at 88% 92%, rgba(185,148,72,0.06) 0%, transparent 55%)",
+              ].join(", "),
+        }}
+      />
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
           <header
