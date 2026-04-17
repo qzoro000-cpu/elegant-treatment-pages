@@ -41,7 +41,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                   "absolute right-6 top-6 inline-flex items-center rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.24em]",
                   p.highlight
                     ? "border-background/30 text-background/80"
-                    : "border-border-strong text-muted-foreground",
+                    : "border-card-foreground/30 text-card-foreground/70",
                 )}
               >
                 {p.tag}
@@ -51,7 +51,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
             <p
               className={cn(
                 "text-[10px] uppercase tracking-[0.28em]",
-                p.highlight ? "text-background/60" : "text-muted-foreground",
+                p.highlight ? "text-background/60" : "text-card-foreground/55",
               )}
             >
               Program
@@ -61,7 +61,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
               <p
                 className={cn(
                   "mt-1 text-sm",
-                  p.highlight ? "text-background/60" : "text-muted-foreground",
+                  p.highlight ? "text-background/60" : "text-card-foreground/60",
                 )}
               >
                 {p.duration}
@@ -73,7 +73,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                 <span
                   className={cn(
                     "text-sm line-through",
-                    p.highlight ? "text-background/50" : "text-muted-foreground",
+                    p.highlight ? "text-background/50" : "text-card-foreground/50",
                   )}
                 >
                   {p.originalPrice}
@@ -87,7 +87,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
             <ul
               className={cn(
                 "mt-8 space-y-3 border-t pt-8 text-sm",
-                p.highlight ? "border-background/15" : "border-border",
+                p.highlight ? "border-background/15" : "border-card-foreground/15",
               )}
             >
               {p.includes.map((inc, i) => (
@@ -95,12 +95,12 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                   <span
                     className={cn(
                       "mt-[10px] h-px w-4 flex-none",
-                      p.highlight ? "bg-background/40" : "bg-foreground/40",
+                      p.highlight ? "bg-background/40" : "bg-card-foreground/40",
                     )}
                   />
                   <span
                     className={cn(
-                      p.highlight ? "text-background/85" : "text-foreground/80",
+                      p.highlight ? "text-background/85" : "text-card-foreground/80",
                     )}
                   >
                     {inc}
@@ -116,7 +116,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                   "mt-10 inline-flex h-12 items-center justify-center rounded-full text-sm font-medium tracking-wide transition-all",
                   p.highlight
                     ? "bg-background text-foreground hover:opacity-90"
-                    : "border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background",
+                    : "border border-card-foreground bg-transparent text-card-foreground hover:bg-card-foreground hover:text-card",
                 )}
               >
                 {ctaPrimary.label}
