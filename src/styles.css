@@ -207,7 +207,7 @@
 
 /* Frosted glass — white sections: white glass box with top shine & shadow */
 @utility glass-white {
-  background: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 255, 255, 0.70);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.55);

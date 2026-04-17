@@ -14,7 +14,7 @@ function PrecautionCard({
 }) {
   return (
     <div className="glass-white relative overflow-hidden rounded-3xl p-8 text-center sm:p-10">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[10%] min-h-6 bg-gradient-to-b from-white/60 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] min-h-10 bg-gradient-to-b from-white/60 to-transparent" />
       <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">{label}</p>
       <h3 className="mt-3 text-xl font-semibold">{title}</h3>
       <ul className="mt-8 space-y-3">
