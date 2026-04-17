@@ -26,7 +26,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
               {keyPoints.map((p, i) => (
                 <li
                   key={i}
-                  className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
+                  className="glass-light rounded-2xl p-6"
                 >
                   <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}

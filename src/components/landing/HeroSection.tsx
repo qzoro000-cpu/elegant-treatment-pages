@@ -72,7 +72,7 @@ export function HeroSection({
             {/* Floating premium info card */}
             {(durationText || priceText) && (
               <div className="absolute -bottom-10 left-4 right-4 sm:-bottom-12 sm:left-auto sm:right-8 sm:w-[340px]">
-                <div className="rounded-2xl border border-border bg-card/95 p-6 shadow-[var(--shadow-card)] backdrop-blur-xl">
+                <div className="glass-light rounded-2xl p-6 shadow-[var(--shadow-card)]">
                   <div className="flex items-end justify-between gap-6">
                     {durationText && (
                       <div>

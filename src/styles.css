@@ -195,3 +195,19 @@
 @utility hairline {
   border-top: 1px solid var(--color-border);
 }
+
+/* Frosted glass — dark backgrounds (black sections) */
+@utility glass-dark {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Frosted glass — light/ivory backgrounds */
+@utility glass-light {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}

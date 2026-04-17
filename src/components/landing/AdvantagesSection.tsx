@@ -21,7 +21,7 @@ export function AdvantagesSection({ advantages }: Props) {
         {advantages.map((a) => (
           <article
             key={a.index}
-            className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)] sm:p-10"
+            className="glass-light group relative overflow-hidden rounded-3xl p-8 transition-all hover:-translate-y-1 sm:p-10"
           >
             <div
               className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-60"

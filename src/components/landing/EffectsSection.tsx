@@ -24,22 +24,21 @@ export function EffectsSection({ effects, progressInfo }: Props) {
         {effects?.length ? (
           <div className="lg:col-span-2">
             <div
-              className="relative overflow-hidden rounded-3xl border border-white/40 p-8 shadow-[var(--shadow-card)] sm:p-10 text-card-foreground"
-              style={{ background: "var(--gradient-card-frost)" }}
+              className="glass-dark relative overflow-hidden rounded-3xl p-8 sm:p-10 text-white"
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-60"
                 style={{ background: "var(--gradient-shine)" }}
               />
               <div className="relative">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-card-foreground/55">
+                <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                   Expected Effects
                 </p>
                 <ul className="mt-8 space-y-5">
                   {effects.map((e, i) => (
                     <li key={i} className="flex items-start gap-4">
-                      <span className="mt-2 inline-block h-px w-6 flex-none bg-card-foreground/40" />
-                      <span className="font-display text-xl font-light leading-snug">{e}</span>
+                      <span className="mt-2 inline-block h-px w-6 flex-none bg-white/40" />
+                      <span className="font-display text-xl font-light leading-snug text-white">{e}</span>
                     </li>
                   ))}
                 </ul>
@@ -50,16 +49,16 @@ export function EffectsSection({ effects, progressInfo }: Props) {
 
         {progressInfo?.length ? (
           <div className="lg:col-span-3">
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {progressInfo.map((info, i) => (
                 <div
                   key={i}
-                  className="flex flex-col justify-between bg-card p-6 sm:p-8 min-h-[140px] text-card-foreground"
+                  className="glass-dark flex flex-col justify-between rounded-2xl p-6 sm:p-8 min-h-[140px]"
                 >
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-card-foreground/50">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                     {info.label}
                   </p>
-                  <p className="mt-6 font-display text-2xl font-light leading-tight text-card-foreground">
+                  <p className="mt-6 font-display text-2xl font-light leading-tight text-white">
                     {info.value}
                   </p>
                 </div>
