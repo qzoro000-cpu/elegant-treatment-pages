@@ -18,6 +18,7 @@ export function FaqSection({ faqItems }: Props) {
       eyebrow="FAQ"
       title="자주 묻는 질문"
       description="궁금하신 부분을 정리했습니다. 더 깊은 안내가 필요하시다면 언제든 문의해 주세요."
+      tone="elevated"
     >
       <div className="mx-auto max-w-3xl">
         <Accordion type="single" collapsible className="w-full">
