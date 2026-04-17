@@ -7,6 +7,11 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  tanstackStart: {
+    start: {
+      entry: "./src/client.tsx",
+    },
+  },
   vite: {
     server: {
       port: 5000,
