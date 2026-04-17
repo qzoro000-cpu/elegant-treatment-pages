@@ -48,6 +48,9 @@
   --shadow-soft: 0 1px 2px rgba(20, 18, 15, 0.04), 0 8px 24px -12px rgba(20, 18, 15, 0.08);
   --shadow-card: 0 1px 2px rgba(20, 18, 15, 0.05), 0 20px 48px -24px rgba(20, 18, 15, 0.18);
   --shadow-float: 0 2px 4px rgba(20, 18, 15, 0.06), 0 32px 80px -32px rgba(20, 18, 15, 0.28);
+
+  /* Subtle gold motif for dark sections — barely visible, curiosity-inducing */
+  --pattern-gold: url("data:image/svg+xml,<svg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'><g stroke='%23C9A85C' stroke-width='0.6' fill='none'><polygon points='60,4 116,60 60,116 4,60'/><polygon points='60,22 98,60 60,98 22,60'/><polygon points='60,40 80,60 60,80 40,60'/><circle cx='60' cy='60' r='3' fill='%23C9A85C' opacity='0.5'/><circle cx='60' cy='4' r='1.5' fill='%23C9A85C' opacity='0.4'/><circle cx='116' cy='60' r='1.5' fill='%23C9A85C' opacity='0.4'/><circle cx='60' cy='116' r='1.5' fill='%23C9A85C' opacity='0.4'/><circle cx='4' cy='60' r='1.5' fill='%23C9A85C' opacity='0.4'/></g></svg>");
 }
 
 :root {

@@ -42,6 +42,18 @@ export function Section({
             : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
         }}
       />
+      {/* Gold motif — dark sections only, barely perceptible */}
+      {tone === "dark" && (
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: "var(--pattern-gold)",
+            backgroundSize: "120px 120px",
+            backgroundRepeat: "repeat",
+            opacity: 0.055,
+          }}
+        />
+      )}
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
           <header
