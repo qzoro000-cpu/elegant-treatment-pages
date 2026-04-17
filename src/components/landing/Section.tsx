@@ -27,11 +27,17 @@ export function Section({
       id={id}
       className={cn(
         "relative w-full overflow-hidden",
-        tone === "elevated" && "bg-surface",
         tone === "dark" && "bg-foreground text-background",
         "py-20 sm:py-28 lg:py-36",
         className,
       )}
+      style={tone !== "dark" ? {
+        background: tone === "elevated"
+          /* elevated: slightly deeper warm cream gradient */
+          ? "linear-gradient(to bottom, oklch(0.96 0.017 86), oklch(0.935 0.021 88))"
+          /* default: bright ivory → warm cream */
+          : "linear-gradient(to bottom, oklch(0.978 0.017 85), oklch(0.955 0.021 87))",
+      } : undefined}
     >
       {/* Hairline divider — fades at edges */}
       <div
