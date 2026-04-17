@@ -11,7 +11,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           {overviewTitle && (
-            <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               {overviewTitle}
             </h2>
           )}

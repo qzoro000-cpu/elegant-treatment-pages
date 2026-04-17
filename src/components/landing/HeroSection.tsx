@@ -111,7 +111,7 @@ export function HeroSection({
                 {category}
               </div>
             )}
-            <h1 className="font-display text-5xl font-light leading-[1.02] tracking-tight text-balance sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-5xl font-light leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
               {treatmentName}
             </h1>
             {subtitle && (

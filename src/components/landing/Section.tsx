@@ -64,7 +64,7 @@ export function Section({
               </div>
             )}
             {title && (
-              <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+              <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
                 {title}
               </h2>
             )}

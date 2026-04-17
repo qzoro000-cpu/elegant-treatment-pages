@@ -19,7 +19,7 @@ export function FinalCtaSection({ finalCta, clinicInfo }: Props) {
         <p className="text-[11px] uppercase tracking-[0.32em] text-card-foreground/55">
           Begin Your Journey
         </p>
-        <h2 className="mt-6 font-display text-4xl font-light leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+        <h2 className="mt-6 font-display text-4xl font-light leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
           {finalCta.headline}
         </h2>
         {finalCta.body && (
