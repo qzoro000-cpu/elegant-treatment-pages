@@ -24,11 +24,16 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
           <div
             key={p.name}
             className={cn(
-              "relative flex flex-col rounded-3xl border p-8 sm:p-10 transition-all",
+              "relative flex flex-col overflow-hidden rounded-3xl border p-8 sm:p-10 transition-all",
               p.highlight
-                ? "border-foreground bg-foreground text-background shadow-[var(--shadow-float)] lg:scale-[1.03]"
-                : "border-border bg-card shadow-[var(--shadow-soft)]",
+                ? "border-white/10 text-background shadow-[var(--shadow-float)] lg:scale-[1.03]"
+                : "border-white/40 text-card-foreground shadow-[var(--shadow-card)]",
             )}
+            style={{
+              background: p.highlight
+                ? "var(--gradient-card-steel)"
+                : "var(--gradient-card-frost)",
+            }}
           >
             {p.tag && (
               <span
