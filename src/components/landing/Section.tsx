@@ -42,18 +42,19 @@ export function Section({
             : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
         }}
       />
-      {/* Gold diamond lattice — dark sections only */}
+      {/* Ambient gold glow — dark sections only, atmospheric candlelight feel */}
       {tone === "dark" && (
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            backgroundImage: [
-              "linear-gradient(45deg, rgba(201,168,92,0.18) 1px, transparent 1px)",
-              "linear-gradient(-45deg, rgba(201,168,92,0.18) 1px, transparent 1px)",
-              "radial-gradient(circle, rgba(201,168,92,0.22) 1.5px, transparent 1.5px)",
+            background: [
+              /* primary warm glow — top-right */
+              "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.13) 0%, transparent 65%)",
+              /* secondary accent — bottom-left */
+              "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.09) 0%, transparent 60%)",
+              /* faint center shimmer */
+              "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.05) 0%, transparent 55%)",
             ].join(", "),
-            backgroundSize: "48px 48px, 48px 48px, 48px 48px",
-            backgroundPosition: "0 0, 0 0, 24px 24px",
           }}
         />
       )}
