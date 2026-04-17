@@ -26,7 +26,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
             className={cn(
               "relative flex flex-col overflow-hidden rounded-3xl p-8 sm:p-10 transition-all",
               p.highlight
-                ? "glass-dark text-white shadow-[var(--shadow-float)] lg:scale-[1.03]"
+                ? "glass-ink text-white shadow-[var(--shadow-float)] lg:scale-[1.03]"
                 : "glass-light text-card-foreground shadow-[var(--shadow-card)]",
             )}
           >

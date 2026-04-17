@@ -24,7 +24,7 @@ export function EffectsSection({ effects, progressInfo }: Props) {
         {effects?.length ? (
           <div className="lg:col-span-2">
             <div
-              className="glass-dark relative overflow-hidden rounded-3xl p-8 sm:p-10 text-white"
+              className="glass-silver relative overflow-hidden rounded-3xl p-8 sm:p-10 text-white"
             >
               <div
                 className="pointer-events-none absolute inset-0 opacity-60"
@@ -53,7 +53,7 @@ export function EffectsSection({ effects, progressInfo }: Props) {
               {progressInfo.map((info, i) => (
                 <div
                   key={i}
-                  className="glass-dark flex flex-col justify-between rounded-2xl p-6 sm:p-8 min-h-[140px]"
+                  className="glass-silver flex flex-col justify-between rounded-2xl p-6 sm:p-8 min-h-[140px]"
                 >
                   <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                     {info.label}
