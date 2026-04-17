@@ -11,6 +11,7 @@ export function AdvantagesSection({ advantages }: Props) {
       id="advantages"
       eyebrow="Advantages"
       align="center"
+      className="bg-white"
       title={
         <>
           섬세함이 만드는<br />
@@ -22,11 +23,11 @@ export function AdvantagesSection({ advantages }: Props) {
         {advantages.map((a) => (
           <article
             key={a.index}
-            className="glass-light group relative overflow-hidden rounded-3xl p-8 text-center transition-all hover:-translate-y-1 sm:p-10"
+            className="group relative overflow-hidden rounded-3xl border border-black/10 bg-white/60 p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.06)] backdrop-blur-md transition-all hover:-translate-y-1 sm:p-10"
           >
             <div
-              className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-60"
-              style={{ background: "var(--gradient-metal)" }}
+              className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-30"
+              style={{ background: "linear-gradient(to right, transparent, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.15) 70%, transparent)" }}
             />
             <span className="text-2xl font-light tabular-nums text-muted-foreground">
               {a.index}

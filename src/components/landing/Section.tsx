@@ -27,17 +27,11 @@ export function Section({
       id={id}
       className={cn(
         "relative w-full overflow-hidden",
+        tone === "elevated" && "bg-surface",
         tone === "dark" && "bg-foreground text-background",
         "py-20 sm:py-28 lg:py-36",
         className,
       )}
-      style={tone !== "dark" ? {
-        background: tone === "elevated"
-          /* elevated: slightly deeper warm cream gradient */
-          ? "linear-gradient(to bottom, oklch(0.96 0.017 86), oklch(0.935 0.021 88))"
-          /* default: bright ivory → warm cream */
-          : "linear-gradient(to bottom, oklch(0.978 0.017 85), oklch(0.955 0.021 87))",
-      } : undefined}
     >
       {/* Hairline divider — fades at edges */}
       <div
@@ -48,24 +42,19 @@ export function Section({
             : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
         }}
       />
-      {/* Ambient gold glow — dark sections: warm candlelight / light sections: ivory-gold whisper */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: tone === "dark"
-            ? [
-                "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.22) 0%, transparent 65%)",
-                "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.14) 0%, transparent 60%)",
-                "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.06) 0%, transparent 55%)",
-              ].join(", ")
-            : [
-                /* mirrored: primary glow — top-left */
-                "radial-gradient(ellipse 65% 50% at 15% 8%, rgba(201,168,92,0.09) 0%, transparent 60%)",
-                /* secondary — bottom-right */
-                "radial-gradient(ellipse 50% 40% at 88% 92%, rgba(185,148,72,0.06) 0%, transparent 55%)",
-              ].join(", "),
-        }}
-      />
+      {/* Ambient gold glow — dark sections only */}
+      {tone === "dark" && (
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: [
+              "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.22) 0%, transparent 65%)",
+              "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.14) 0%, transparent 60%)",
+              "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.06) 0%, transparent 55%)",
+            ].join(", "),
+          }}
+        />
+      )}
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
           <header

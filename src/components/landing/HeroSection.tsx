@@ -31,7 +31,7 @@ export function HeroSection({
   if (!treatmentName) return null;
 
   return (
-    <section className="relative w-full overflow-hidden bg-background pt-24 sm:pt-28 lg:pt-32">
+    <section className="relative w-full overflow-hidden bg-white pt-24 sm:pt-28 lg:pt-32">
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 pb-20 lg:pb-28">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-end">
           {/* Image — large editorial frame */}
