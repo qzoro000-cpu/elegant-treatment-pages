@@ -11,6 +11,7 @@ export function WhyTatoaSection({ tatoaReasons }: Props) {
       id="why-tatoa"
       eyebrow="Why Tatoa"
       tone="dark"
+      align="center"
       className="bg-black"
       title={
         <>
@@ -25,19 +26,15 @@ export function WhyTatoaSection({ tatoaReasons }: Props) {
         {tatoaReasons.map((r, i) => (
           <div
             key={i}
-            className="glass-dark rounded-3xl p-8 sm:p-12 text-white"
+            className="glass-dark rounded-3xl p-8 sm:p-12 text-white text-center"
           >
-            <div className="flex items-start gap-5">
-              <span className="text-2xl font-light tabular-nums text-white/40">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="text-xl font-semibold sm:text-2xl text-white">{r.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-base">
-                  {r.body}
-                </p>
-              </div>
-            </div>
+            <span className="text-2xl font-light tabular-nums text-white/40">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <h3 className="mt-3 text-xl font-semibold sm:text-2xl text-white">{r.title}</h3>
+            <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-base">
+              {r.body}
+            </p>
           </div>
         ))}
       </div>

@@ -9,14 +9,14 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
   return (
     <Section id="overview" eyebrow="Overview" tone="elevated">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 text-center">
           {overviewTitle && (
             <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               {overviewTitle}
             </h2>
           )}
           {overviewBody && (
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/75 text-pretty sm:text-lg">
+            <p className="mt-8 text-base leading-relaxed text-foreground/75 sm:text-lg">
               {overviewBody}
             </p>
           )}
@@ -26,7 +26,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
               {keyPoints.map((p, i) => (
                 <li
                   key={i}
-                  className="glass-light rounded-2xl p-6"
+                  className="glass-light rounded-2xl p-6 text-center"
                 >
                   <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}

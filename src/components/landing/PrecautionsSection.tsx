@@ -13,14 +13,13 @@ function PrecautionCard({
   items: string[];
 }) {
   return (
-    <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-soft)] sm:p-10">
+    <div className="rounded-3xl border border-border bg-card p-8 text-center shadow-[var(--shadow-soft)] sm:p-10">
       <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">{label}</p>
       <h3 className="mt-3 text-xl font-semibold">{title}</h3>
-      <ul className="mt-8 space-y-4">
+      <ul className="mt-8 space-y-3">
         {items.map((it, i) => (
-          <li key={i} className="flex gap-3 text-sm leading-relaxed text-foreground/80">
-            <span className="mt-2 inline-block h-1 w-1 flex-none rounded-full bg-foreground/50" />
-            <span>{it}</span>
+          <li key={i} className="text-sm leading-relaxed text-foreground/80">
+            {it}
           </li>
         ))}
       </ul>
@@ -54,6 +53,7 @@ export function PrecautionsSection({
       title="안전한 시술을 위한 안내"
       description="시술 전후의 작은 흐름까지 함께 설계합니다. 변화는 안전 위에서 가장 아름답습니다."
       tone="elevated"
+      align="center"
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6">
         {cards.map((c) => (

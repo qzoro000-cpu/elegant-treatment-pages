@@ -11,6 +11,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
     <Section
       id="pricing"
       eyebrow="Programs & Pricing"
+      align="center"
       title={
         <>
           단정한 가격,<br />
@@ -45,17 +46,17 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
 
             <p
               className={cn(
-                "text-[10px] uppercase tracking-[0.28em]",
+                "text-center text-[10px] uppercase tracking-[0.28em]",
                 p.highlight ? "text-white/60" : "text-card-foreground/55",
               )}
             >
               Program
             </p>
-            <h3 className="mt-3 text-xl font-semibold">{p.name}</h3>
+            <h3 className="mt-3 text-center text-xl font-semibold">{p.name}</h3>
             {p.duration && (
               <p
                 className={cn(
-                  "mt-1 text-sm",
+                  "mt-1 text-center text-sm",
                   p.highlight ? "text-white/60" : "text-card-foreground/60",
                 )}
               >
@@ -63,7 +64,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
               </p>
             )}
 
-            <div className="mt-8 flex flex-col gap-1">
+            <div className="mt-8 flex flex-col items-center gap-1">
               {p.originalPrice && (
                 <span
                   className={cn(

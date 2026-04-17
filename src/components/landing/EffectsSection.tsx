@@ -11,6 +11,7 @@ export function EffectsSection({ effects, progressInfo }: Props) {
       id="effects"
       eyebrow="Effects & Process"
       tone="dark"
+      align="center"
       className="bg-black"
       title={
         <>
@@ -34,11 +35,10 @@ export function EffectsSection({ effects, progressInfo }: Props) {
                 <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                   Expected Effects
                 </p>
-                <ul className="mt-8 space-y-5">
+                <ul className="mt-8 space-y-4">
                   {effects.map((e, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <span className="mt-2 inline-block h-px w-6 flex-none bg-white/40" />
-                      <span className="text-lg font-medium leading-snug text-white">{e}</span>
+                    <li key={i} className="text-lg font-medium leading-snug text-white text-center">
+                      {e}
                     </li>
                   ))}
                 </ul>
@@ -53,12 +53,12 @@ export function EffectsSection({ effects, progressInfo }: Props) {
               {progressInfo.map((info, i) => (
                 <div
                   key={i}
-                  className="glass-silver flex flex-col justify-between rounded-2xl p-6 sm:p-8 min-h-[140px]"
+                  className="glass-silver flex flex-col items-center justify-center rounded-2xl p-6 sm:p-8 min-h-[140px] text-center"
                 >
                   <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                     {info.label}
                   </p>
-                  <p className="mt-6 text-2xl font-semibold leading-tight text-white">
+                  <p className="mt-3 text-2xl font-semibold leading-tight text-white">
                     {info.value}
                   </p>
                 </div>
