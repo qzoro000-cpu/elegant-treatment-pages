@@ -49,11 +49,11 @@ export function Section({
           style={{
             background: [
               /* primary warm glow — top-right */
-              "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.13) 0%, transparent 65%)",
+              "radial-gradient(ellipse 70% 55% at 80% 10%, rgba(201,168,92,0.35) 0%, transparent 65%)",
               /* secondary accent — bottom-left */
-              "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.09) 0%, transparent 60%)",
+              "radial-gradient(ellipse 55% 45% at 12% 90%, rgba(185,148,72,0.22) 0%, transparent 60%)",
               /* faint center shimmer */
-              "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.05) 0%, transparent 55%)",
+              "radial-gradient(ellipse 40% 30% at 50% 50%, rgba(210,178,102,0.10) 0%, transparent 55%)",
             ].join(", "),
           }}
         />
