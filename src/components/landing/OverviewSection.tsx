@@ -7,7 +7,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
   if (!overviewTitle && !overviewBody && !keyPoints?.length) return null;
 
   return (
-    <Section id="overview" eyebrow="Overview" tone="elevated">
+    <Section id="overview" eyebrow="Overview" tone="elevated" className="bg-white">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7 text-center">
           {overviewTitle && (
@@ -26,7 +26,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
               {keyPoints.map((p, i) => (
                 <li
                   key={i}
-                  className="glass-light rounded-2xl p-6 text-center"
+                  className="rounded-2xl bg-surface p-6 text-center shadow-[0_2px_16px_rgba(0,0,0,0.07)]"
                 >
                   <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}

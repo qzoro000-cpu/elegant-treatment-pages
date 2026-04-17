@@ -12,6 +12,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
       id="pricing"
       eyebrow="Programs & Pricing"
       align="center"
+      className="bg-white"
       title={
         <>
           단정한 가격,<br />
@@ -28,7 +29,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
               "relative flex flex-col overflow-hidden rounded-3xl p-8 sm:p-10 transition-all",
               p.highlight
                 ? "glass-ink text-white shadow-[var(--shadow-float)] lg:scale-[1.03]"
-                : "glass-light text-card-foreground shadow-[var(--shadow-card)]",
+                : "bg-surface text-card-foreground shadow-[0_2px_20px_rgba(0,0,0,0.07)]",
             )}
           >
             {p.tag && (
