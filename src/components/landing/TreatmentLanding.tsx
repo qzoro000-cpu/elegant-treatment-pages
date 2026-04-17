@@ -7,7 +7,6 @@ import { AdvantagesSection } from "./AdvantagesSection";
 import { PrecautionsSection } from "./PrecautionsSection";
 import { WhyTatoaSection } from "./WhyTatoaSection";
 import { PricingSection } from "./PricingSection";
-import { GallerySection } from "./GallerySection";
 import { FaqSection } from "./FaqSection";
 import { FinalCtaSection } from "./FinalCtaSection";
 import { StickyMobileCta } from "./StickyMobileCta";
@@ -49,7 +48,6 @@ export function TreatmentLanding({ data }: { data: TreatmentData }) {
           pricingNote={data.pricingNote}
           ctaPrimary={data.ctaPrimary}
         />
-        <GallerySection galleryImages={data.galleryImages} />
         <FaqSection faqItems={data.faqItems} />
         <FinalCtaSection finalCta={data.finalCta} clinicInfo={data.clinicInfo} />
       </main>
