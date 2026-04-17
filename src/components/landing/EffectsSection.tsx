@@ -10,6 +10,8 @@ export function EffectsSection({ effects, progressInfo }: Props) {
     <Section
       id="effects"
       eyebrow="Effects & Process"
+      tone="dark"
+      className="bg-black"
       title={
         <>
           기대할 수 있는 변화와<br />

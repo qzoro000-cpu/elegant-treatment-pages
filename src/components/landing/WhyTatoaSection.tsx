@@ -10,25 +10,25 @@ export function WhyTatoaSection({ tatoaReasons }: Props) {
     <Section
       id="why-tatoa"
       eyebrow="Why Tatoa"
-      tone="elevated"
+      tone="dark"
+      className="bg-black"
       title={
         <>
-          <span className="text-card-foreground">왜 이 시술은</span>
+          <span>왜 이 시술은</span>
           <br />
           <span className="metal-text">타토아여야 하는가</span>
         </>
       }
       description="장비가 아닌 철학이, 기술이 아닌 태도가 결과를 만듭니다."
-      className="text-card-foreground"
     >
       <div
-        className="grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-black/5 sm:grid-cols-2"
-        style={{ background: "var(--gradient-card-frost)" }}
+        className="grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/10 sm:grid-cols-2"
+        style={{ background: "rgba(255,255,255,0.06)" }}
       >
         {tatoaReasons.map((r, i) => (
           <div
             key={i}
-            className="bg-card/70 p-8 sm:p-12 text-card-foreground backdrop-blur-sm"
+            className="bg-card p-8 sm:p-12 text-card-foreground"
           >
             <div className="flex items-start gap-5">
               <span className="font-display text-2xl font-light text-card-foreground/40">
