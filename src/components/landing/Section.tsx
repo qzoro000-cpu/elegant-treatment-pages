@@ -26,14 +26,24 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative w-full",
+        "relative w-full overflow-hidden",
         tone === "elevated" && "bg-surface",
         tone === "dark" && "bg-foreground text-background",
         "py-20 sm:py-28 lg:py-36",
         className,
       )}
     >
-      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+      {/* Black vignette — top 25% */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-1/4 z-10"
+        style={{ background: "var(--gradient-section-top)" }}
+      />
+      {/* Black vignette — bottom 25% */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 z-10"
+        style={{ background: "var(--gradient-section-bottom)" }}
+      />
+      <div className="relative z-20 mx-auto w-full max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
           <header
             className={cn(
