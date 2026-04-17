@@ -42,15 +42,18 @@ export function Section({
             : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
         }}
       />
-      {/* Gold motif — dark sections only, barely perceptible */}
+      {/* Gold diamond lattice — dark sections only */}
       {tone === "dark" && (
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            backgroundImage: "var(--pattern-gold)",
-            backgroundSize: "120px 120px",
-            backgroundRepeat: "repeat",
-            opacity: 0.055,
+            backgroundImage: [
+              "linear-gradient(45deg, rgba(201,168,92,0.18) 1px, transparent 1px)",
+              "linear-gradient(-45deg, rgba(201,168,92,0.18) 1px, transparent 1px)",
+              "radial-gradient(circle, rgba(201,168,92,0.22) 1.5px, transparent 1.5px)",
+            ].join(", "),
+            backgroundSize: "48px 48px, 48px 48px, 48px 48px",
+            backgroundPosition: "0 0, 0 0, 24px 24px",
           }}
         />
       )}
