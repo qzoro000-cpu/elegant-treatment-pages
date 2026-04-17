@@ -63,7 +63,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
               </p>
             )}
 
-            <div className="mt-8 flex items-baseline gap-3">
+            <div className="mt-8 flex flex-col gap-1">
               {p.originalPrice && (
                 <span
                   className={cn(
@@ -74,7 +74,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                   {p.originalPrice}
                 </span>
               )}
-              <span className="text-3xl font-semibold tracking-tight sm:text-4xl">
+              <span className="text-2xl font-semibold tracking-tight sm:text-3xl break-all">
                 {p.price}
               </span>
             </div>
