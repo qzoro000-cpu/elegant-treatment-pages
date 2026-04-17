@@ -2,15 +2,16 @@ import { StrictMode, startTransition } from 'react'
 import { hydrateRoot } from 'react-dom/client'
 import { StartClient } from '@tanstack/react-start/client'
 
-if (import.meta.env.DEV) {
-  document.querySelectorAll('script[src*="replco"], script[src*="replit"]').forEach((el) => el.remove())
-}
-
 startTransition(() => {
   hydrateRoot(
     document,
     <StrictMode>
       <StartClient />
     </StrictMode>,
+    {
+      onRecoverableError: import.meta.env.DEV
+        ? () => {} // Replit's proxy injects scripts that cause unavoidable hydration mismatches in dev
+        : undefined,
+    },
   )
 })
