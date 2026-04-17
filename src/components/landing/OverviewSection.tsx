@@ -31,7 +31,7 @@ export function OverviewSection({ overviewTitle, overviewBody, overviewImage, ke
                   <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="mt-3 font-display text-xl font-normal">{p.title}</h3>
+                  <h3 className="mt-3 text-base font-semibold">{p.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
                 </li>
               ))}

@@ -15,7 +15,7 @@ function PrecautionCard({
   return (
     <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-soft)] sm:p-10">
       <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">{label}</p>
-      <h3 className="mt-3 font-display text-2xl font-light">{title}</h3>
+      <h3 className="mt-3 text-xl font-semibold">{title}</h3>
       <ul className="mt-8 space-y-4">
         {items.map((it, i) => (
           <li key={i} className="flex gap-3 text-sm leading-relaxed text-foreground/80">

@@ -28,11 +28,11 @@ export function AdvantagesSection({ advantages }: Props) {
               style={{ background: "var(--gradient-metal)" }}
             />
             <div className="flex items-start gap-6">
-              <span className="font-display text-3xl font-light text-muted-foreground">
+              <span className="text-2xl font-light tabular-nums text-muted-foreground">
                 {a.index}
               </span>
               <div className="flex-1 pt-1">
-                <h3 className="font-display text-2xl font-normal leading-snug sm:text-3xl">
+                <h3 className="text-xl font-semibold leading-snug sm:text-2xl">
                   {a.title}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">

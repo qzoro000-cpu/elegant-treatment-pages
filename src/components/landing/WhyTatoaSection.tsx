@@ -28,11 +28,11 @@ export function WhyTatoaSection({ tatoaReasons }: Props) {
             className="glass-dark rounded-3xl p-8 sm:p-12 text-white"
           >
             <div className="flex items-start gap-5">
-              <span className="font-display text-2xl font-light text-white/40">
+              <span className="text-2xl font-light tabular-nums text-white/40">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
-                <h3 className="font-display text-2xl font-normal sm:text-3xl text-white">{r.title}</h3>
+                <h3 className="text-xl font-semibold sm:text-2xl text-white">{r.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-base">
                   {r.body}
                 </p>

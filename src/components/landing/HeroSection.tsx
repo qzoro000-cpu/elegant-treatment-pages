@@ -72,28 +72,28 @@ export function HeroSection({
             {/* Floating premium info card */}
             {(durationText || priceText) && (
               <div className="absolute -bottom-10 left-4 right-4 sm:-bottom-12 sm:left-auto sm:right-8 sm:w-[340px]">
-                <div className="glass-light rounded-2xl p-6 shadow-[var(--shadow-card)]">
-                  <div className="flex items-end justify-between gap-6">
+                <div className="glass-light rounded-2xl p-5 shadow-[var(--shadow-card)]">
+                  <div className="grid grid-cols-2 gap-4">
                     {durationText && (
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                           Duration
                         </p>
-                        <p className="mt-2 font-display text-2xl font-light">{durationText}</p>
+                        <p className="mt-2 text-xl font-medium leading-snug truncate">{durationText}</p>
                       </div>
                     )}
                     {priceText && (
-                      <div className="text-right">
+                      <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">
                           From
                         </p>
-                        <div className="mt-2 flex items-baseline justify-end gap-2">
+                        <div className="mt-2 flex flex-col gap-0.5">
                           {originalPriceText && (
-                            <span className="text-sm text-muted-foreground line-through">
+                            <span className="text-xs text-muted-foreground line-through leading-none">
                               {originalPriceText}
                             </span>
                           )}
-                          <span className="font-display text-2xl font-light">{priceText}</span>
+                          <span className="text-xl font-semibold leading-snug">{priceText}</span>
                         </div>
                       </div>
                     )}

@@ -16,7 +16,7 @@ export function StickyMobileCta({ ctaPrimary, ctaSecondary, priceText }: Props) 
               <span className="text-[9px] uppercase tracking-[0.24em] text-muted-foreground">
                 From
               </span>
-              <span className="font-display text-base font-light truncate">{priceText}</span>
+              <span className="text-base font-semibold truncate">{priceText}</span>
             </div>
           )}
           {ctaSecondary && (

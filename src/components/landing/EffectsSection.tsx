@@ -38,7 +38,7 @@ export function EffectsSection({ effects, progressInfo }: Props) {
                   {effects.map((e, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <span className="mt-2 inline-block h-px w-6 flex-none bg-white/40" />
-                      <span className="font-display text-xl font-light leading-snug text-white">{e}</span>
+                      <span className="text-lg font-medium leading-snug text-white">{e}</span>
                     </li>
                   ))}
                 </ul>
@@ -58,7 +58,7 @@ export function EffectsSection({ effects, progressInfo }: Props) {
                   <p className="text-[10px] uppercase tracking-[0.28em] text-white/50">
                     {info.label}
                   </p>
-                  <p className="mt-6 font-display text-2xl font-light leading-tight text-white">
+                  <p className="mt-6 text-2xl font-semibold leading-tight text-white">
                     {info.value}
                   </p>
                 </div>

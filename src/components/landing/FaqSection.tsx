@@ -27,7 +27,7 @@ export function FaqSection({ faqItems }: Props) {
               value={`item-${i}`}
               className="border-b border-border last:border-b-0"
             >
-              <AccordionTrigger className="py-7 text-left font-display text-lg font-normal hover:no-underline sm:text-xl">
+              <AccordionTrigger className="py-7 text-left text-base font-semibold hover:no-underline sm:text-lg">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="pb-7 text-base leading-relaxed text-muted-foreground">

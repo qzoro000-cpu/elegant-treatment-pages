@@ -51,7 +51,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
             >
               Program
             </p>
-            <h3 className="mt-3 font-display text-2xl font-light">{p.name}</h3>
+            <h3 className="mt-3 text-xl font-semibold">{p.name}</h3>
             {p.duration && (
               <p
                 className={cn(
@@ -74,7 +74,7 @@ export function PricingSection({ pricingPrograms, pricingNote, ctaPrimary }: Pro
                   {p.originalPrice}
                 </span>
               )}
-              <span className="font-display text-4xl font-light tracking-tight sm:text-5xl">
+              <span className="text-3xl font-semibold tracking-tight sm:text-4xl">
                 {p.price}
               </span>
             </div>
