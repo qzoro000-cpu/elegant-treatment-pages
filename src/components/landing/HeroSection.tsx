@@ -32,17 +32,7 @@ export function HeroSection({
 
   return (
     <section className="relative w-full overflow-hidden bg-background pt-24 sm:pt-28 lg:pt-32">
-      {/* Black vignette — top 25% */}
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-1/4 z-10"
-        style={{ background: "var(--gradient-section-top)" }}
-      />
-      {/* Black vignette — bottom 25% */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 z-10"
-        style={{ background: "var(--gradient-section-bottom)" }}
-      />
-      <div className="relative z-20 mx-auto w-full max-w-7xl px-5 sm:px-8 pb-20 lg:pb-28">
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 pb-20 lg:pb-28">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-end">
           {/* Image — large editorial frame */}
           <div className="relative lg:col-span-7 lg:order-2">

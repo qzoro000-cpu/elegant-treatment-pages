@@ -33,17 +33,16 @@ export function Section({
         className,
       )}
     >
-      {/* Black vignette — top 25% */}
+      {/* Hairline divider — fades at edges */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-1/4 z-10"
-        style={{ background: "var(--gradient-section-top)" }}
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background: tone === "dark"
+            ? "linear-gradient(to right, transparent, rgba(255,255,255,0.10) 30%, rgba(255,255,255,0.10) 70%, transparent)"
+            : "linear-gradient(to right, transparent, rgba(20,18,15,0.10) 30%, rgba(20,18,15,0.10) 70%, transparent)",
+        }}
       />
-      {/* Black vignette — bottom 25% */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 z-10"
-        style={{ background: "var(--gradient-section-bottom)" }}
-      />
-      <div className="relative z-20 mx-auto w-full max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
           <header
             className={cn(
